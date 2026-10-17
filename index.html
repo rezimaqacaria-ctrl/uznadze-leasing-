@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>82 D. Uznadze St. — Premium Heritage Commercial Leasing | Tbilisi</title>
+    
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:title" content="82 D. Uznadze St. — 1,429 m² Restored Heritage Flagship Property">
+    <meta property="og:description" content="Prime Commercial Headquarters in Central Tbilisi. EBRD Energy Efficient, Private Courtyard & Parking. Available for Lease.">
+    <meta property="og:image" content="https://rezimaqacaria-ctrl.github.io/uznadze-leasing-/phasade.jpg">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            400: '#D4AF37',
-                            500: '#C5A028',
-                            600: '#B08C1E',
+                        cream: {
+                            50: '#FAF8F5',
+                            100: '#F5F1EA',
+                            200: '#EBE4D8',
                         },
-                        dark: {
-                            900: '#0B0F17',
-                            800: '#111827',
-                            700: '#1F2937',
+                        bronze: {
+                            400: '#A3814C',
+                            500: '#8C6D3B',
+                            600: '#73572D',
+                        },
+                        charcoal: {
+                            900: '#141414',
+                            800: '#1F1F1F',
+                            700: '#2E2E2E',
+                            600: '#4A4A4A',
                         }
                     },
                     fontFamily: {
@@ -32,78 +43,116 @@
             }
         }
     </script>
-</head>
-<body class="bg-dark-900 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-dark-900">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-slate-800">
+    <style>
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link.active {
+            color: #8C6D3B !important;
+            font-weight: 700 !important;
+        }
+        .dark .nav-link.active {
+            color: #D4AF37 !important;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #8C6D3B;
+            border-radius: 2px;
+        }
+        .dark .nav-link.active::after {
+            background-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] dark:bg-[#0B0F17] text-charcoal-900 dark:text-slate-100 font-sans antialiased selection:bg-bronze-500 selection:text-white transition-colors duration-300">
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/90 dark:bg-[#0B0F17]/90 backdrop-blur-md border-b border-cream-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="text-gold-400 font-serif font-bold text-2xl tracking-wider">82 UZNADZE</span>
-                <span class="text-xs bg-gold-500/10 text-gold-400 border border-gold-500/30 px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Leasing</span>
+                <a href="#overview" class="text-charcoal-900 dark:text-white font-serif font-bold text-2xl tracking-widest uppercase">82 Uznadze</a>
+                <span class="hidden sm:inline-block text-[10px] text-bronze-600 dark:text-gold-400 font-semibold uppercase tracking-widest pl-3 border-l border-cream-200 dark:border-slate-800">Commercial Lease</span>
             </div>
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#overview" class="hover:text-gold-400 transition">Overview</a>
-                <a href="#plans" class="hover:text-gold-400 transition">Floor Plans</a>
-                <a href="#specs" class="hover:text-gold-400 transition">Area Breakdown</a>
-                <a href="#engineering" class="hover:text-gold-400 transition">Engineering</a>
-                <a href="#gallery" class="hover:text-gold-400 transition">Gallery</a>
-                <a href="#location" class="hover:text-gold-400 transition">Location</a>
-                <a href="#calculator" class="hover:text-gold-400 transition">Pricing & Lease</a>
+            
+            <div id="nav-menu" class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium text-charcoal-700 dark:text-slate-300">
+                <a href="#overview" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Overview</a>
+                <a href="#plans" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Floor Plans</a>
+                <a href="#specs" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Specifications</a>
+                <a href="#engineering" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Engineering</a>
+                <a href="#gallery" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Gallery</a>
+                <a href="#location" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Location</a>
+                <a href="#pricing" class="nav-link py-1 hover:text-bronze-600 dark:hover:text-gold-400">Leasing Terms</a>
             </div>
-            <a href="https://wa.me/995551221199?text=Hello,%20I%20am%20interested%20in%20leasing%2082%20Uznadze%20St." target="_blank" class="bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold px-5 py-2.5 rounded-full transition shadow-lg shadow-gold-500/20 text-sm">
-                Inquire Now
-            </a>
+
+            <div class="flex items-center space-x-3">
+                <button id="themeToggle" aria-label="Toggle theme" class="p-2.5 rounded-full border border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900 text-charcoal-800 dark:text-amber-400 hover:border-bronze-500 transition duration-200">
+                    <span id="themeIcon">🌙</span>
+                </button>
+
+                <a href="https://wa.me/995551221199?text=Hello,%20I%20am%20interested%20in%20leasing%2082%20Uznadze%20St." target="_blank" class="bg-charcoal-900 dark:bg-gold-500 hover:bg-bronze-500 dark:hover:bg-gold-600 text-cream-50 dark:text-dark-900 uppercase text-xs tracking-widest font-semibold px-6 py-3 transition duration-300">
+                    Inquire Now
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="overview" class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center opacity-25 scale-105 transition transform duration-1000" style="background-image: url('phasade.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
-        
+    <!-- Hero Section (Full-Width Background Image Style) -->
+    <section id="overview" class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden border-b border-cream-200 dark:border-slate-800">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-25 scale-105 transition transform duration-1000" style="background-image: url('phasade.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] dark:from-[#0B0F17] via-[#FDFBF7]/80 dark:via-[#0B0F17]/80 to-transparent"></div>
+
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
-            <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-full">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">Exclusive Commercial Property for Lease</span>
+            <div class="inline-flex items-center space-x-2 border-b border-bronze-500/40 pb-2">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Architectural Heritage · Central Tbilisi</span>
             </div>
-            
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
-                1,429 m² Historic Landmark <br><span class="text-gold-400 italic font-normal">Restored Heritage Flagship Property</span>
+
+            <h1 class="text-4xl sm:text-6xl font-serif text-charcoal-900 dark:text-white leading-[1.15]">
+                1,429 m² Historic Landmark <br>
+                <span class="italic font-normal text-bronze-500 dark:text-gold-400">Restored Heritage Flagship Property</span>
             </h1>
-            
-            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                A meticulously restored 19th-century architectural flagship in central Tbilisi. Engineered for single-tenant autonomy with European efficiency standards, private courtyard, rooftop terrace, and dedicated parking.
+
+            <p class="text-base sm:text-lg text-charcoal-600 dark:text-slate-300 leading-relaxed font-light max-w-2xl mx-auto">
+                A meticulously restored 19th-century architectural flagship in central Tbilisi. Engineered for single-tenant autonomy with European EBRD efficiency standards, private courtyard, rooftop terrace, and dedicated parking.
             </p>
 
-            <!-- Key Features Cards Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 text-left">
-                <div class="bg-dark-800/80 backdrop-blur border border-slate-800 p-5 rounded-2xl">
-                    <p class="text-xs text-slate-400 uppercase tracking-wider">Total Leasable Area</p>
-                    <p class="text-2xl font-bold text-white mt-1">1,429.1 m²</p>
+            <!-- Key Metrics Line -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-cream-200 dark:border-slate-800 text-left max-w-3xl mx-auto">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-charcoal-600 dark:text-slate-400">Total Area</p>
+                    <p class="text-2xl font-serif text-charcoal-900 dark:text-white mt-1">1,429 m²</p>
                 </div>
-                <div class="bg-dark-800/80 backdrop-blur border border-slate-800 p-5 rounded-2xl">
-                    <p class="text-xs text-slate-400 uppercase tracking-wider">Starting Monthly Rent</p>
-                    <p class="text-2xl font-bold text-gold-400 mt-1">$18,000 / mo</p>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-charcoal-600 dark:text-slate-400">Starting Rent</p>
+                    <p class="text-2xl font-serif text-bronze-600 dark:text-gold-400 mt-1">$18,000</p>
                 </div>
-                <div class="bg-dark-800/80 backdrop-blur border border-slate-800 p-5 rounded-2xl">
-                    <p class="text-xs text-slate-400 uppercase tracking-wider">Private Courtyard & Park</p>
-                    <p class="text-2xl font-bold text-white mt-1">245.3 m²</p>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-charcoal-600 dark:text-slate-400">Courtyard & Park</p>
+                    <p class="text-2xl font-serif text-charcoal-900 dark:text-white mt-1">245 m²</p>
                 </div>
-                <div class="bg-dark-800/80 backdrop-blur border border-slate-800 p-5 rounded-2xl">
-                    <p class="text-xs text-slate-400 uppercase tracking-wider">Private Parking</p>
-                    <p class="text-2xl font-bold text-white mt-1">5-6 Spaces</p>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-charcoal-600 dark:text-slate-400">Private Parking</p>
+                    <p class="text-2xl font-serif text-charcoal-900 dark:text-white mt-1">5-6 Slots</p>
                 </div>
             </div>
 
-            <!-- Action Buttons with PDF Download -->
+            <!-- Call to Action Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="#plans" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold px-8 py-4 rounded-full transition text-center shadow-xl shadow-gold-500/20">
+                <a href="#plans" class="w-full sm:w-auto bg-charcoal-900 dark:bg-gold-500 hover:bg-bronze-500 dark:hover:bg-gold-600 text-cream-50 dark:text-dark-900 uppercase text-xs tracking-widest font-semibold px-8 py-4 transition duration-300 text-center">
                     Explore Floor Plans
                 </a>
-                <a href="82-Uznadze-Presentation.pdf" download class="w-full sm:w-auto bg-dark-800 hover:bg-slate-800 text-white border border-slate-700 font-medium px-8 py-4 rounded-full transition text-center flex items-center justify-center space-x-2">
-                    <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                <a href="82-Uznadze-Presentation.pdf" download class="w-full sm:w-auto bg-cream-100 dark:bg-slate-800 hover:bg-cream-200 dark:hover:bg-slate-700 text-charcoal-900 dark:text-white border border-cream-200 dark:border-slate-700 uppercase text-xs tracking-widest font-semibold px-8 py-4 transition duration-300 text-center flex items-center justify-center space-x-2">
+                    <svg class="w-4 h-4 text-bronze-600 dark:text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                     <span>Download Spec Sheet (PDF)</span>
                 </a>
@@ -112,359 +161,395 @@
     </section>
 
     <!-- Suitable Use Cases Section -->
-    <section class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
-            <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Versatile Operational Design</span>
-            <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white">Ideal Foreign & Local Headquarters</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-dark-800 p-6 rounded-2xl border border-slate-800">
-                <div class="text-gold-400 text-3xl mb-3">🏛️</div>
-                <h3 class="text-lg font-bold text-white mb-2">Embassies & Consulates</h3>
-                <p class="text-slate-400 text-sm">Gated perimeter, controlled portal entrance, high security, and diplomatic corridor location.</p>
+    <section class="py-20 border-b border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Operational Suitability</span>
+                <h2 class="text-3xl font-serif text-charcoal-900 dark:text-white">Tailored for Diplomatic & Corporate Excellence</h2>
             </div>
-            <div class="bg-dark-800 p-6 rounded-2xl border border-slate-800">
-                <div class="text-gold-400 text-3xl mb-3">💼</div>
-                <h3 class="text-lg font-bold text-white mb-2">Corporate HQ & IT Hubs</h3>
-                <p class="text-slate-400 text-sm">Multiple boardrooms, high-ceiling open spaces, redundant power, and fiber-optic readiness.</p>
-            </div>
-            <div class="bg-dark-800 p-6 rounded-2xl border border-slate-800">
-                <div class="text-gold-400 text-3xl mb-3">🏦</div>
-                <h3 class="text-lg font-bold text-white mb-2">Financial Institutions</h3>
-                <p class="text-slate-400 text-sm">Secure basement vaults/storage, client reception zones, and executive boardrooms.</p>
-            </div>
-            <div class="bg-dark-800 p-6 rounded-2xl border border-slate-800">
-                <div class="text-gold-400 text-3xl mb-3">🏨</div>
-                <h3 class="text-lg font-bold text-white mb-2">Boutique Hotel / Clinic</h3>
-                <p class="text-slate-400 text-sm">545 m² hotel room layout capability, rooftop terrace lounge, and private green courtyard.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-3">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400 uppercase tracking-widest">01 / Embassy</span>
+                    <h3 class="text-xl font-serif text-charcoal-900 dark:text-white">Embassies & Consulates</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 leading-relaxed font-light">Gated perimeter, controlled portal entrance, high security, and premier diplomatic corridor location.</p>
+                </div>
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-3">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400 uppercase tracking-widest">02 / Corporate</span>
+                    <h3 class="text-xl font-serif text-charcoal-900 dark:text-white">Corporate HQ & IT Hubs</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 leading-relaxed font-light">Multiple boardrooms, high-ceiling open work areas, redundant power backup, and fiber-optic readiness.</p>
+                </div>
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-3">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400 uppercase tracking-widest">03 / Financial</span>
+                    <h3 class="text-xl font-serif text-charcoal-900 dark:text-white">Financial Institutions</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 leading-relaxed font-light">Secure basement storage/vaults, client reception zones, and executive C-suite boardrooms.</p>
+                </div>
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-3">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400 uppercase tracking-widest">04 / Boutique</span>
+                    <h3 class="text-xl font-serif text-charcoal-900 dark:text-white">Boutique Hotel / Clinic</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 leading-relaxed font-light">545 m² hotel room layout capability, rooftop terrace lounge, and private green courtyard.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Floor Plans Section -->
-    <section id="plans" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Architectural Layout</span>
-            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Floor Plans & Spatial Allocation</h2>
-            <p class="text-slate-400">Detailed floor plan blueprints optimized for smooth operational flow and high functionality.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-dark-800 rounded-3xl overflow-hidden border border-slate-800 hover:border-gold-500/50 transition duration-300">
-                <div class="aspect-[4/3] bg-slate-900 overflow-hidden">
-                    <img src="1st floor plan.jpg" alt="1st Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 space-y-2">
-                    <span class="text-xs font-bold text-gold-400 uppercase">Ground Level</span>
-                    <h3 class="text-xl font-bold text-white">1st Floor Plan — 366.1 m²</h3>
-                    <p class="text-slate-400 text-sm">Grand entrance portal, main reception hall, operational office suites, and direct passage to the 115.3 m² private courtyard.</p>
-                </div>
+    <section id="plans" class="py-24 border-b border-cream-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Architectural Plans</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Floor Layouts & Spatial Allocation</h2>
+                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">Detailed blueprints engineered for seamless operational flow across all four levels.</p>
             </div>
 
-            <div class="bg-dark-800 rounded-3xl overflow-hidden border border-slate-800 hover:border-gold-500/50 transition duration-300">
-                <div class="aspect-[4/3] bg-slate-900 overflow-hidden">
-                    <img src="2nd floor plan.jpg" alt="2nd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 space-y-2">
-                    <span class="text-xs font-bold text-gold-400 uppercase">Executive Level</span>
-                    <h3 class="text-xl font-bold text-white">2nd Floor Plan — 427.7 m²</h3>
-                    <p class="text-slate-400 text-sm">Executive C-suite offices, dual conference boardrooms, high restored ceilings, and premium natural lighting.</p>
-                </div>
-            </div>
-
-            <div class="bg-dark-800 rounded-3xl overflow-hidden border border-slate-800 hover:border-gold-500/50 transition duration-300">
-                <div class="aspect-[4/3] bg-slate-900 overflow-hidden">
-                    <img src="3dr floor plan.jpg" alt="3rd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 space-y-2">
-                    <span class="text-xs font-bold text-gold-400 uppercase">Upper & Terrace Level</span>
-                    <h3 class="text-xl font-bold text-white">3rd Floor Plan — 360.7 m²</h3>
-                    <p class="text-slate-400 text-sm">Open workspace layouts connecting directly to the 24.7 m² rooftop terrace with panoramic city views.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comprehensive Specifications Section -->
-    <section id="specs" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Official Engineering Parameters</span>
-            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Complete Technical Matrix</h2>
-            <p class="text-slate-400">Official land, area breakdown, building volumes, and height parameters.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-dark-800 p-8 rounded-3xl border border-slate-800 space-y-4">
-                <h3 class="text-xl font-bold text-white border-b border-slate-700/60 pb-3 flex justify-between items-center">
-                    <span>Floor Area Breakdown</span>
-                    <span class="text-gold-400 text-sm font-normal">1,429.1 m²</span>
-                </h3>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex justify-between"><span>Basement Level:</span> <strong class="text-white">249.0 m²</strong></li>
-                    <li class="flex justify-between"><span>First Floor (Ground):</span> <strong class="text-white">366.1 m²</strong></li>
-                    <li class="flex justify-between"><span>Second Floor:</span> <strong class="text-white">427.7 m²</strong></li>
-                    <li class="flex justify-between"><span>Third Floor:</span> <strong class="text-white">360.7 m²</strong></li>
-                    <li class="flex justify-between"><span>Roof Level:</span> <strong class="text-white">24.7 m²</strong></li>
-                </ul>
-            </div>
-
-            <div class="bg-dark-800 p-8 rounded-3xl border border-slate-800 space-y-4">
-                <h3 class="text-xl font-bold text-white border-b border-slate-700/60 pb-3 flex justify-between items-center">
-                    <span>Usable Area Breakdown</span>
-                    <span class="text-gold-400 text-sm font-normal">1,271.4 m²</span>
-                </h3>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex justify-between"><span>Prime Operational Space:</span> <strong class="text-white">545.0 m²</strong></li>
-                    <li class="flex justify-between"><span>Auxiliary & Utility Areas:</span> <strong class="text-white">281.5 m²</strong></li>
-                    <li class="flex justify-between"><span>Basement Usable Area:</span> <strong class="text-white">171.6 m²</strong></li>
-                    <li class="flex justify-between"><span>Terraces & Summer Areas:</span> <strong class="text-white">153.5 m²</strong></li>
-                    <li class="flex justify-between"><span>Staircases & Entrances:</span> <strong class="text-white">119.8 m²</strong></li>
-                </ul>
-            </div>
-
-            <div class="bg-dark-800 p-8 rounded-3xl border border-slate-800 space-y-4">
-                <h3 class="text-xl font-bold text-white border-b border-slate-700/60 pb-3 flex justify-between items-center">
-                    <span>Land, Volume & Height</span>
-                    <span class="text-gold-400 text-sm font-normal">Structural</span>
-                </h3>
-                <ul class="space-y-3 text-sm text-slate-300">
-                    <li class="flex justify-between"><span>Total Land Plot:</span> <strong class="text-white">668.0 m²</strong></li>
-                    <li class="flex justify-between"><span>Building Footprint:</span> <strong class="text-white">538.5 m²</strong></li>
-                    <li class="flex justify-between"><span>Inner Private Courtyard:</span> <strong class="text-white">115.3 m²</strong></li>
-                    <li class="flex justify-between"><span>On-Site Green Zone / Park:</span> <strong class="text-white">130.0 m²</strong></li>
-                    <li class="flex justify-between"><span>Archway / Passage Area:</span> <strong class="text-white">48.0 m²</strong></li>
-                    <li class="flex justify-between"><span>Total Building Height:</span> <strong class="text-white">17.8 m</strong></li>
-                    <li class="flex justify-between"><span>Total Building Volume:</span> <strong class="text-white">5,533.0 m³</strong></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Engineering & Infrastructure Details -->
-    <section id="engineering" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800 bg-dark-800/40 rounded-3xl my-12">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Uncompromising Quality</span>
-            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Engineering & Infrastructure</h2>
-            <p class="text-slate-400">Restored and retrofitted according to European EBRD energy efficiency standards.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">01 / Climate</div>
-                <h3 class="text-xl font-bold text-white">Daikin VRV HVAC Systems</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Multi-zone climate control system allowing independent temperature configuration across all floors and operational rooms.</p>
-            </div>
-
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">02 / Ventilation</div>
-                <h3 class="text-xl font-bold text-white">European Fresh Air Exchange</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Continuous fresh air recovery ventilation ensuring optimal indoor air quality and humidity control throughout the building.</p>
-            </div>
-
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">03 / Power</div>
-                <h3 class="text-xl font-bold text-white">24/7 Backup Diesel Generator</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Autonomous automatic transfer generator providing zero downtime for server infrastructure and essential operations.</p>
-            </div>
-
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">04 / Exterior</div>
-                <h3 class="text-xl font-bold text-white">Mitsubishi Facade Cladding</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Premium Japanese architectural facade cladding combined with authentic heritage brickwork restoration.</p>
-            </div>
-
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">05 / Fittings</div>
-                <h3 class="text-xl font-bold text-white">Grohe & Hansgrohe Plumbing</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">German commercial-grade sanitary installations across all 4 levels for longevity and water efficiency.</p>
-            </div>
-
-            <div class="p-6 bg-dark-800 rounded-2xl border border-slate-800 space-y-3">
-                <div class="text-gold-400 text-2xl font-bold">06 / Efficiency</div>
-                <h3 class="text-xl font-bold text-white">EBRD Energy Certification</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Thermal insulation of walls, double-glazed soundproof windows, significantly reducing annual operational utility expenses.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery -->
-    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Visual Overview</span>
-            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Interior & Exterior Gallery</h2>
-            <p class="text-slate-400">A blend of historic 19th-century elegance and modern corporate utility.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="phasade.jpg" alt="Building Facade" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="phasade side.jpg" alt="Facade Side View" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="board room.jpg" alt="Main Board Room" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="second board room.jpg" alt="Second Board Room" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="office.jpg" alt="Office Space" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="terrace.jpg" alt="Rooftop Terrace" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="hall.jpg" alt="Entrance Hall" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 h-64">
-                <img src="mail entrance.jpg" alt="Main Portal Entrance" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-        </div>
-    </section>
-
-    <!-- Location & Micro-location Section -->
-    <section id="location" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Prime Location</span>
-                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Strategic Accessibility in Central Tbilisi</h2>
-                <p class="text-slate-300 leading-relaxed">
-                    Located at 82 Dimitri Uznadze Street in Chughureti district — one of Tbilisi's most prestigious commercial and diplomatic hubs.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-start space-x-4">
-                        <div class="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 font-bold">🚶</div>
-                        <div>
-                            <h4 class="text-white font-bold">5-Minute Walk to Marjanishvili Metro</h4>
-                            <p class="text-slate-400 text-sm">Just 450 meters from Marjanishvili Metro station and public transport hubs.</p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plan 1 -->
+                <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
+                        <img src="1st floor plan.jpg" alt="1st Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 font-bold">🚗</div>
-                        <div>
-                            <h4 class="text-white font-bold">Direct River Access & Parking</h4>
-                            <p class="text-slate-400 text-sm">Quick connection to Right/Left Embankments and Rustaveli Avenue. Includes 5-6 private parking slots.</p>
-                        </div>
+                    <div class="space-y-1 p-2">
+                        <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Ground Level</span>
+                        <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">1st Floor Plan — 366.1 m²</h3>
+                        <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Grand entrance portal, main reception hall, operational office suites, and direct passage to the 115.3 m² private courtyard.</p>
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="w-10 h-10 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 font-bold">🍽️</div>
-                        <div>
-                            <h4 class="text-white font-bold">Vibrant Neighborhood</h4>
-                            <p class="text-slate-400 text-sm">Surrounded by international restaurants, hotels, embassies, banking centers, and cafes.</p>
-                        </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
+                        <img src="2nd floor plan.jpg" alt="2nd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="space-y-1 p-2">
+                        <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Executive Level</span>
+                        <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">2nd Floor Plan — 427.7 m²</h3>
+                        <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Executive C-suite offices, dual conference boardrooms, high restored ceilings, and premium natural lighting.</p>
+                    </div>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
+                        <img src="3dr floor plan.jpg" alt="3rd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="space-y-1 p-2">
+                        <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Upper & Terrace Level</span>
+                        <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">3rd Floor Plan — 360.7 m²</h3>
+                        <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Open workspace layouts connecting directly to the 24.7 m² rooftop terrace with panoramic city views.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="bg-dark-800 p-8 rounded-3xl border border-slate-800 space-y-6 text-center">
-                <div class="text-6xl">📍</div>
-                <h3 class="text-2xl font-bold text-white">82 Dimitri Uznadze St.</h3>
-                <p class="text-slate-400 text-sm">Chughureti District, Tbilisi, Georgia</p>
-                <div class="pt-4">
-                    <a href="https://maps.google.com/?q=82+Dimitri+Uznadze+St+Tbilisi" target="_blank" class="bg-dark-900 hover:bg-slate-800 text-gold-400 border border-gold-500/40 font-bold px-8 py-4 rounded-xl transition inline-block">
-                        Open in Google Maps
+    <!-- Technical Specifications Matrix -->
+    <section id="specs" class="py-24 border-b border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Official Parameters</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Technical Area Specifications</h2>
+                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">Complete breakdown according to official land registry and engineering audits.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Floor Areas -->
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
+                    <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Floor Areas</h3>
+                        <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">1,429.1 m²</span>
+                    </div>
+                    <ul class="space-y-3 text-xs text-charcoal-700 dark:text-slate-300 font-light">
+                        <li class="flex justify-between"><span>Basement Level:</span> <strong class="text-charcoal-900 dark:text-white font-medium">249.0 m²</strong></li>
+                        <li class="flex justify-between"><span>First Floor (Ground):</span> <strong class="text-charcoal-900 dark:text-white font-medium">366.1 m²</strong></li>
+                        <li class="flex justify-between"><span>Second Floor:</span> <strong class="text-charcoal-900 dark:text-white font-medium">427.7 m²</strong></li>
+                        <li class="flex justify-between"><span>Third Floor:</span> <strong class="text-charcoal-900 dark:text-white font-medium">360.7 m²</strong></li>
+                        <li class="flex justify-between"><span>Roof Level:</span> <strong class="text-charcoal-900 dark:text-white font-medium">24.7 m²</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Usable Areas -->
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
+                    <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Usable Area</h3>
+                        <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">1,271.4 m²</span>
+                    </div>
+                    <ul class="space-y-3 text-xs text-charcoal-700 dark:text-slate-300 font-light">
+                        <li class="flex justify-between"><span>Prime Operational Space:</span> <strong class="text-charcoal-900 dark:text-white font-medium">545.0 m²</strong></li>
+                        <li class="flex justify-between"><span>Auxiliary & Utility Areas:</span> <strong class="text-charcoal-900 dark:text-white font-medium">281.5 m²</strong></li>
+                        <li class="flex justify-between"><span>Basement Usable Area:</span> <strong class="text-charcoal-900 dark:text-white font-medium">171.6 m²</strong></li>
+                        <li class="flex justify-between"><span>Terraces & Summer Areas:</span> <strong class="text-charcoal-900 dark:text-white font-medium">153.5 m²</strong></li>
+                        <li class="flex justify-between"><span>Staircases & Entrances:</span> <strong class="text-charcoal-900 dark:text-white font-medium">119.8 m²</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Land & Structure -->
+                <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
+                    <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
+                        <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Land & Structure</h3>
+                        <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">Dimensions</span>
+                    </div>
+                    <ul class="space-y-3 text-xs text-charcoal-700 dark:text-slate-300 font-light">
+                        <li class="flex justify-between"><span>Total Land Plot:</span> <strong class="text-charcoal-900 dark:text-white font-medium">668.0 m²</strong></li>
+                        <li class="flex justify-between"><span>Building Footprint:</span> <strong class="text-charcoal-900 dark:text-white font-medium">538.5 m²</strong></li>
+                        <li class="flex justify-between"><span>Inner Private Courtyard:</span> <strong class="text-charcoal-900 dark:text-white font-medium">115.3 m²</strong></li>
+                        <li class="flex justify-between"><span>On-Site Green Zone / Park:</span> <strong class="text-charcoal-900 dark:text-white font-medium">130.0 m²</strong></li>
+                        <li class="flex justify-between"><span>Archway / Passage Area:</span> <strong class="text-charcoal-900 dark:text-white font-medium">48.0 m²</strong></li>
+                        <li class="flex justify-between"><span>Total Building Height:</span> <strong class="text-charcoal-900 dark:text-white font-medium">17.8 m</strong></li>
+                        <li class="flex justify-between"><span>Total Building Volume:</span> <strong class="text-charcoal-900 dark:text-white font-medium">5,533.0 m³</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering & Infrastructure Section -->
+    <section id="engineering" class="py-24 border-b border-cream-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Technical Quality</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Engineering & Infrastructure</h2>
+                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">Restored and retrofitted according to European EBRD energy efficiency standards.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">01</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">Daikin VRV HVAC Systems</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Multi-zone climate control allowing independent temperature configuration across all floors and operational rooms.</p>
+                </div>
+
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">02</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">European Fresh Air Exchange</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Continuous fresh air recovery ventilation ensuring optimal indoor air quality and humidity control throughout.</p>
+                </div>
+
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">03</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">24/7 Backup Diesel Generator</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Autonomous automatic transfer generator providing zero downtime for server infrastructure and essential operations.</p>
+                </div>
+
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">04</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">Mitsubishi Facade Cladding</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Premium Japanese architectural facade cladding combined with authentic heritage brickwork restoration.</p>
+                </div>
+
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">05</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">Grohe & Hansgrohe Plumbing</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">German commercial-grade sanitary installations across all 4 levels for longevity and water efficiency.</p>
+                </div>
+
+                <div class="p-8 border border-cream-200 dark:border-slate-800 bg-cream-50/50 dark:bg-slate-900/40 space-y-2">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400">06</span>
+                    <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">EBRD Energy Certification</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Thermal insulation of walls, double-glazed soundproof windows, significantly reducing annual operational utility expenses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-24 border-b border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Visual Overview</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Interior & Exterior Gallery</h2>
+                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">A blend of historic 19th-century elegance and modern corporate utility.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="phasade.jpg" alt="Building Facade" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="phasade side.jpg" alt="Facade Side View" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="board room.jpg" alt="Main Board Room" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="second board room.jpg" alt="Second Board Room" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="office.jpg" alt="Office Space" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="terrace.jpg" alt="Rooftop Terrace" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="hall.jpg" alt="Entrance Hall" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden">
+                    <img src="mail entrance.jpg" alt="Main Portal Entrance" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-24 border-b border-cream-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Prime Location</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Strategic Accessibility in Central Tbilisi</h2>
+                    <p class="text-sm text-charcoal-600 dark:text-slate-300 font-light leading-relaxed">
+                        Situated at 82 Dimitri Uznadze Street in Chughureti district — one of Tbilisi's premier commercial and diplomatic corridors.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="border-l-2 border-bronze-500 dark:border-gold-400 pl-4 py-1">
+                            <h4 class="text-sm font-serif text-charcoal-900 dark:text-white">5-Minute Walk to Marjanishvili Metro</h4>
+                            <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light mt-0.5">Just 450 meters from Marjanishvili Metro station and major public transit lines.</p>
+                        </div>
+                        <div class="border-l-2 border-bronze-500 dark:border-gold-400 pl-4 py-1">
+                            <h4 class="text-sm font-serif text-charcoal-900 dark:text-white">Direct River Embankment Access & Parking</h4>
+                            <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light mt-0.5">Quick connection to Right/Left Embankments and Rustaveli Avenue. Includes 5-6 private parking slots.</p>
+                        </div>
+                        <div class="border-l-2 border-bronze-500 dark:border-gold-400 pl-4 py-1">
+                            <h4 class="text-sm font-serif text-charcoal-900 dark:text-white">Diplomatic & Commercial Hub</h4>
+                            <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light mt-0.5">Surrounded by embassies, international hotels, banking centers, and fine dining establishments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-cream-50 dark:bg-slate-900 p-8 border border-cream-200 dark:border-slate-800 text-center space-y-4">
+                    <span class="text-xs font-serif text-bronze-600 dark:text-gold-400 uppercase tracking-widest block">Address</span>
+                    <h3 class="text-2xl font-serif text-charcoal-900 dark:text-white">82 Dimitri Uznadze St.</h3>
+                    <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">Chughureti District, Tbilisi, Georgia</p>
+                    <div class="pt-4">
+                        <a href="https://maps.google.com/?q=82+Dimitri+Uznadze+St+Tbilisi" target="_blank" class="bg-charcoal-900 dark:bg-gold-500 hover:bg-bronze-500 dark:hover:bg-gold-600 text-cream-50 dark:text-dark-900 text-xs uppercase tracking-widest font-semibold px-8 py-4 transition duration-300 inline-block">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Terms & Lease Calculator Section -->
+    <section id="pricing" class="py-24 border-b border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Leasing Terms</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Rental Structure & Maintenance Options</h2>
+                    <p class="text-sm text-charcoal-600 dark:text-slate-300 font-light leading-relaxed">
+                        Flexible single-tenant leasing structures designed for foreign embassies, international organizations, and corporate headquarters.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="p-6 bg-[#FDFBF7] dark:bg-[#0B0F17] border border-cream-200 dark:border-slate-800 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-serif text-lg text-charcoal-900 dark:text-white">Full Service Package</h4>
+                                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light mt-0.5">Includes complete building maintenance & facility management</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-2xl font-serif text-bronze-600 dark:text-gold-400">$21,000</span>
+                                <span class="text-[10px] uppercase text-charcoal-600 dark:text-slate-400 block">/ Month</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-[#FDFBF7] dark:bg-[#0B0F17] border border-cream-200 dark:border-slate-800 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-serif text-lg text-charcoal-900 dark:text-white">Base Lease Package</h4>
+                                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light mt-0.5">Standard lease excluding facility maintenance services</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-2xl font-serif text-charcoal-900 dark:text-white">$18,000</span>
+                                <span class="text-[10px] uppercase text-charcoal-600 dark:text-slate-400 block">/ Month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tax Disclaimer -->
+                    <div class="p-4 bg-cream-100 dark:bg-slate-800/80 border border-cream-200 dark:border-slate-700 text-xs text-charcoal-700 dark:text-slate-300 font-light leading-relaxed">
+                        <strong>Tax Notice:</strong> Quoted prices are net of applicable taxes, including Value Added Tax (VAT), income tax, or municipal utility fees. Final terms subject to official lease agreement.
+                    </div>
+                </div>
+
+                <!-- Interactive Calculator -->
+                <div class="lg:col-span-6 bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 sm:p-10 border border-cream-200 dark:border-slate-800 space-y-6">
+                    <h3 class="text-2xl font-serif text-charcoal-900 dark:text-white border-b border-cream-200 dark:border-slate-800 pb-4">Rental Estimator</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-charcoal-700 dark:text-slate-300 mb-2 font-medium">Select Lease Package</label>
+                            <select id="packageSelect" class="w-full bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 px-4 py-3 text-sm text-charcoal-900 dark:text-white focus:outline-none focus:border-bronze-500">
+                                <option value="21000">With Full Maintenance — $21,000 / month</option>
+                                <option value="18000">Without Maintenance — $18,000 / month</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-charcoal-700 dark:text-slate-300 mb-2 font-medium">Effective Rate per m² (1,429 m²)</label>
+                            <input type="text" id="calculatedRate" value="$14.70 / m²" disabled class="w-full bg-cream-100 dark:bg-slate-800/60 border border-cream-200 dark:border-slate-800 px-4 py-3 text-xs text-charcoal-600 dark:text-slate-400 cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-cream-200 dark:border-slate-800 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs uppercase tracking-widest text-charcoal-700 dark:text-slate-300">Base Monthly Rent:</span>
+                            <span id="monthlyResult" class="text-2xl font-serif text-bronze-600 dark:text-gold-400">$21,000</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-charcoal-600 dark:text-slate-400">
+                            <span>Base Annual Rent:</span>
+                            <span id="annualResult" class="font-serif text-charcoal-900 dark:text-white font-semibold">$252,000</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/995551221199?text=Hello,%20I%20would%20like%20to%20discuss%20leasing%2082%20Uznadze%20St." target="_blank" class="w-full bg-charcoal-900 dark:bg-gold-500 hover:bg-bronze-500 dark:hover:bg-gold-600 text-cream-50 dark:text-dark-900 uppercase text-xs tracking-widest font-semibold py-4 transition duration-300 text-center block">
+                        Request Official Commercial Offer
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Pricing Terms & Interactive Calculator Section -->
-    <section id="calculator" class="py-24 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-gold-400 font-semibold uppercase tracking-widest text-xs">Transparent Pricing</span>
-                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">Rental Terms & Maintenance Options</h2>
-                <p class="text-slate-400 leading-relaxed">
-                    Select a leasing arrangement that matches your operational requirements. Flexible single-tenant lease structures available for corporate tenants and embassies.
-                </p>
-
-                <!-- Pricing Options Breakdown -->
-                <div class="space-y-4 pt-2">
-                    <div class="p-5 bg-dark-800 rounded-2xl border border-slate-700/80 flex justify-between items-center">
-                        <div>
-                            <h4 class="text-white font-bold text-lg">Full Service Option</h4>
-                            <p class="text-slate-400 text-xs mt-1">Includes complete building maintenance & facility management</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-2xl font-bold text-gold-400">$21,000</span>
-                            <span class="text-xs text-slate-400 block">/ Month</span>
-                        </div>
-                    </div>
-
-                    <div class="p-5 bg-dark-800 rounded-2xl border border-slate-700/80 flex justify-between items-center">
-                        <div>
-                            <h4 class="text-white font-bold text-lg">Base Lease Option</h4>
-                            <p class="text-slate-400 text-xs mt-1">Standard lease excluding facility maintenance services</p>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-2xl font-bold text-white">$18,000</span>
-                            <span class="text-xs text-slate-400 block">/ Month</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tax Disclaimer Box -->
-                <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-start space-x-3">
-                    <span class="text-amber-400 text-xl font-bold">⚠️</span>
-                    <p class="text-xs text-amber-200/90 leading-relaxed">
-                        <strong>Tax Disclaimer:</strong> Quoted prices do not include applicable taxes, including Value Added Tax (VAT), income tax, or municipal/utility fees. Final terms subject to official contract negotiation.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Interactive Estimator -->
-            <div class="bg-dark-800 p-8 sm:p-10 rounded-3xl border border-slate-800 space-y-6">
-                <h3 class="text-2xl font-bold text-white">Lease Cost Overview</h3>
-                
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Select Lease Package</label>
-                        <select id="packageSelect" class="w-full bg-dark-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500">
-                            <option value="21000">With Full Maintenance — $21,000 / month</option>
-                            <option value="18000">Without Maintenance — $18,000 / month</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Effective Rate per m² (1,429 m²)</label>
-                        <input type="text" id="calculatedRate" value="$14.70 / m²" disabled class="w-full bg-dark-900/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-400 cursor-not-allowed">
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-slate-700/60 space-y-3">
-                    <div class="flex justify-between items-center text-slate-300">
-                        <span>Base Monthly Net Rent:</span>
-                        <span id="monthlyResult" class="text-2xl font-bold text-gold-400">$21,000</span>
-                    </div>
-                    <div class="flex justify-between items-center text-slate-400 text-sm">
-                        <span>Base Annual Net Rent:</span>
-                        <span id="annualResult" class="font-bold text-white">$252,000</span>
-                    </div>
-                </div>
-
-                <p class="text-[11px] text-slate-500 text-center italic">* All prices are net of VAT & income taxes.</p>
-
-                <a href="https://wa.me/995551221199?text=Hello,%20I%20would%20like%20to%20discuss%20leasing%2082%20Uznadze%20St." target="_blank" class="w-full bg-gold-500 hover:bg-gold-600 text-dark-900 font-bold py-4 rounded-xl transition text-center block shadow-lg shadow-gold-500/20">
-                    Request Commercial Proposal
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark-900 border-t border-slate-800 py-12 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div class="space-y-1 text-center sm:text-left">
-                <p class="font-serif font-bold text-lg text-white">82 D. Uznadze St. Commercial Leasing</p>
-                <p class="text-xs text-slate-500">Central Tbilisi, Georgia — Prime Heritage Property</p>
+    <footer class="py-12 bg-[#FDFBF7] dark:bg-[#0B0F17] border-t border-cream-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-charcoal-600 dark:text-slate-400 font-light">
+            <div>
+                <p class="font-serif font-semibold text-charcoal-900 dark:text-white">82 D. Uznadze St. Commercial Leasing</p>
+                <p>Central Tbilisi, Georgia — Restored Heritage Flagship Property</p>
             </div>
-            <p class="text-xs text-slate-500">© 2026 All rights reserved.</p>
+            <p>© 2026 All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript Logic -->
     <script>
+        // Dark / Light Mode Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.classList.remove('dark');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeIcon.textContent = '🌙';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeIcon.textContent = '☀️';
+            }
+        });
+
+        // Pricing Calculator Logic
         const packageSelect = document.getElementById('packageSelect');
         const calculatedRate = document.getElementById('calculatedRate');
         const monthlyResult = document.getElementById('monthlyResult');
@@ -483,6 +568,32 @@
 
         packageSelect.addEventListener('change', updatePricing);
         updatePricing();
+
+        // Scrollspy Navigation Indicator Logic
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function highlightNavOnScroll() {
+            let scrollY = window.pageYOffset;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 120;
+                const sectionId = current.getAttribute("id");
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${sectionId}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener("scroll", highlightNavOnScroll);
+        window.addEventListener("load", highlightNavOnScroll);
     </script>
 </body>
 </html>
