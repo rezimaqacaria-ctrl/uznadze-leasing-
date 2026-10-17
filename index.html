@@ -72,6 +72,10 @@
         .dark .nav-link.active::after {
             background-color: #D4AF37;
         }
+        /* Hide scrollbar when lightbox is open */
+        body.lightbox-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-[#FDFBF7] dark:bg-[#0B0F17] text-charcoal-900 dark:text-slate-100 font-sans antialiased selection:bg-bronze-500 selection:text-white transition-colors duration-300">
@@ -220,22 +224,20 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Plan 1 -->
                 <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
-                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
-                        <img src="1st floor plan.jpg" alt="1st Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700 cursor-pointer group">
+                        <img src="1st floor plan.jpg" alt="1st Floor Plan" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="space-y-1 p-2">
                         <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Ground Level</span>
                         <h3 class="text-lg font-serif text-charcoal-900 dark:text-white">1st Floor Plan — 366.1 m²</h3>
-                        <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Main entrance, reception hall, office suites, and direct access to the 115.3 m² courtyard.</p>
+                        <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light leading-relaxed">Main entrance, reception hall, office suites, and direct access to the courtyard.</p>
                     </div>
                 </div>
 
-                <!-- Plan 2 -->
                 <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
-                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
-                        <img src="2nd floor plan.jpg" alt="2nd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700 cursor-pointer group">
+                        <img src="2nd floor plan.jpg" alt="2nd Floor Plan" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="space-y-1 p-2">
                         <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Executive Level</span>
@@ -244,10 +246,9 @@
                     </div>
                 </div>
 
-                <!-- Plan 3 -->
                 <div class="bg-cream-50 dark:bg-slate-900 border border-cream-200 dark:border-slate-800 p-4 space-y-4">
-                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700">
-                        <img src="3dr floor plan.jpg" alt="3rd Floor Plan" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <div class="aspect-[4/3] overflow-hidden bg-white dark:bg-slate-800 border border-cream-200 dark:border-slate-700 cursor-pointer group">
+                        <img src="3dr floor plan.jpg" alt="3rd Floor Plan" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="space-y-1 p-2">
                         <span class="text-[10px] uppercase tracking-widest text-bronze-600 dark:text-gold-400 font-semibold">Upper & Terrace Level</span>
@@ -269,7 +270,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Floor Areas -->
                 <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
                     <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
                         <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Floor Areas</h3>
@@ -284,7 +284,6 @@
                     </ul>
                 </div>
 
-                <!-- Usable Areas -->
                 <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
                     <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
                         <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Usable Area</h3>
@@ -299,7 +298,6 @@
                     </ul>
                 </div>
 
-                <!-- Land & Structure -->
                 <div class="bg-[#FDFBF7] dark:bg-[#0B0F17] p-8 border border-cream-200 dark:border-slate-800 space-y-6">
                     <div class="border-b border-cream-200 dark:border-slate-800 pb-3 flex justify-between items-baseline">
                         <h3 class="font-serif text-xl text-charcoal-900 dark:text-white">Land & Structure</h3>
@@ -368,96 +366,118 @@
         </div>
     </section>
 
-    <!-- Grouped Photo Gallery Section -->
-    <section id="gallery" class="py-24 border-b border-cream-200 dark:border-slate-800 bg-cream-50 dark:bg-slate-900/50">
+    <!-- Bento Photo Gallery Section -->
+    <section id="gallery" class="py-24 border-b border-cream-200 dark:border-slate-800 bg-[#FDFBF7] dark:bg-[#0B0F17]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
                 <span class="text-xs uppercase tracking-[0.2em] font-semibold text-bronze-600 dark:text-gold-400">Visual Overview</span>
                 <h2 class="text-3xl sm:text-4xl font-serif text-charcoal-900 dark:text-white">Property Gallery</h2>
-                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">19th-century architecture integrated with modern office infrastructure.</p>
+                <p class="text-xs text-charcoal-600 dark:text-slate-400 font-light">Click any image to expand and view in high resolution.</p>
             </div>
 
             <!-- Group 1: Exterior & Facades -->
-            <div class="mb-16">
-                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 border-b border-cream-200 dark:border-slate-800 pb-2">Exterior & Facades</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- New Photos added here -->
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="53734b12-63ec-4016-b728-f1f5ac50002f-1_all_43224.jpg" alt="Front Facade (Gray)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="mb-20">
+                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 flex items-center space-x-4">
+                    <span>Exterior & Facades</span>
+                    <div class="flex-grow h-px bg-cream-200 dark:bg-slate-800"></div>
+                </h3>
+                
+                <!-- Bento Grid Layout -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[250px]">
+                    
+                    <!-- Main Large Image -->
+                    <div class="col-span-2 row-span-2 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="53734b12-63ec-4016-b728-f1f5ac50002f-1_all_43224.jpg" alt="Front Facade (Gray)" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="1000093521.jpg" alt="Back Facade (White)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    
+                    <!-- Medium Image -->
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="back phasade aesthetic double wall.jpg" alt="Back Facade Details" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="phasade.jpg" alt="Front Facade" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Small Images -->
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="1000093521.jpg" alt="Back Facade (White)" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="phasade side.jpg" alt="Front Facade Side View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="phasade.jpg" alt="Front Facade" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="front from gate side picture.jpg" alt="Front from Gate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Row 3 -->
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="phasade side.jpg" alt="Front Facade Side" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="front phasade from door side picture.jpg" alt="Front Facade by Door" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="front from gate side picture.jpg" alt="Front from Gate" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="front phasade further away photo .jpg" alt="Front Facade Wide View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="back phasade drone picture .jpg" alt="Back Facade Drone View" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="back phasade aesthetic double wall.jpg" alt="Back Facade Double Wall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Row 4 -->
+                    <div class="col-span-1 row-span-2 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="front phasade from door side picture.jpg" alt="Front Facade by Door" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="back phasade aesthetic 2 windows.jpg" alt="Back Facade Windows" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="front phasade further away photo .jpg" alt="Front Facade Wide View" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="back phasade aesthetic.jpg" alt="Back Facade Aesthetic" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="back phasade aesthetic 2 windows.jpg" alt="Back Facade Windows" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="back phasade drone picture .jpg" alt="Back Facade Drone View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="back phasade aesthetic.jpg" alt="Back Facade Aesthetic" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="back phasade under picture.jpg" alt="Back Facade Courtyard View" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="back phasade under picture.jpg" alt="Back Facade Courtyard View" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
                 </div>
             </div>
 
             <!-- Group 2: Offices & Meeting Rooms -->
-            <div class="mb-16">
-                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 border-b border-cream-200 dark:border-slate-800 pb-2">Offices & Meeting Rooms</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="board room.jpg" alt="Executive Board Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="mb-20">
+                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 flex items-center space-x-4">
+                    <span>Offices & Meeting Rooms</span>
+                    <div class="flex-grow h-px bg-cream-200 dark:bg-slate-800"></div>
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[250px]">
+                    <div class="col-span-2 row-span-2 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="board room.jpg" alt="Executive Board Room" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="second board room.jpg" alt="Secondary Meeting Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="office.jpg" alt="Open Office Workspace" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="office.jpg" alt="Open Office Workspace" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="second board room.jpg" alt="Secondary Meeting Room" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
                 </div>
             </div>
 
             <!-- Group 3: Interior & Common Areas -->
             <div>
-                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 border-b border-cream-200 dark:border-slate-800 pb-2">Interior & Common Areas</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="hall.jpg" alt="Entrance Hall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <h3 class="text-xl font-serif text-charcoal-900 dark:text-white mb-6 flex items-center space-x-4">
+                    <span>Interior & Common Areas</span>
+                    <div class="flex-grow h-px bg-cream-200 dark:bg-slate-800"></div>
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[250px]">
+                    <div class="col-span-2 row-span-2 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="hall.jpg" alt="Entrance Hall" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="mail entrance.jpg" alt="Main Entrance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="mail entrance.jpg" alt="Main Entrance" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="main door from inside .jpg" alt="Main Door from Inside" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-1 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="main door from inside .jpg" alt="Main Door Internal View" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="staircase and door picture.jpg" alt="Stairwell and Door" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="terrace.jpg" alt="Rooftop Terrace" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="staircase picture.jpg" alt="Restored Staircase" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="staircase picture.jpg" alt="Restored Staircase" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
-                    <div class="bg-white dark:bg-slate-900 p-2 border border-cream-200 dark:border-slate-800 h-64 overflow-hidden group">
-                        <img src="terrace.jpg" alt="Rooftop Terrace" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="col-span-2 row-span-1 relative overflow-hidden bg-slate-100 dark:bg-slate-900 cursor-pointer group rounded-sm shadow-sm">
+                        <img src="staircase and door picture.jpg" alt="Stairwell and Door Detail" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-700">
                     </div>
                 </div>
             </div>
@@ -606,6 +626,19 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center transition-opacity duration-300 opacity-0">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-5xl hover:text-bronze-500 transition duration-200 z-10">&times;</button>
+        <button id="lightbox-prev" class="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-bronze-500 transition duration-200 z-10">&#8249;</button>
+        
+        <div class="relative max-h-[85vh] max-w-[90vw] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Expanded Image" class="max-h-[80vh] object-contain shadow-2xl rounded-sm">
+            <p id="lightbox-caption" class="mt-4 text-slate-300 text-xs sm:text-sm font-light tracking-widest uppercase text-center"></p>
+        </div>
+
+        <button id="lightbox-next" class="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-bronze-500 transition duration-200 z-10">&#8250;</button>
+    </div>
+
     <script>
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
@@ -651,6 +684,64 @@
 
         packageSelect.addEventListener('change', updatePricing);
         updatePricing();
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-img'));
+        let currentIdx = 0;
+
+        galleryImages.forEach((img, idx) => {
+            img.parentElement.addEventListener('click', () => {
+                currentIdx = idx;
+                updateLightbox();
+                lightbox.classList.remove('hidden');
+                document.body.classList.add('lightbox-open');
+                setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+            });
+        });
+
+        function updateLightbox() {
+            lightboxImg.src = galleryImages[currentIdx].src;
+            lightboxCaption.textContent = galleryImages[currentIdx].alt;
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            document.body.classList.remove('lightbox-open');
+            setTimeout(() => lightbox.classList.add('hidden'), 300);
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        
+        document.getElementById('lightbox-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIdx = (currentIdx === 0) ? galleryImages.length - 1 : currentIdx - 1;
+            updateLightbox();
+        });
+        
+        document.getElementById('lightbox-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIdx = (currentIdx === galleryImages.length - 1) ? 0 : currentIdx + 1;
+            updateLightbox();
+        });
+
+        // Close when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') document.getElementById('lightbox-next').click();
+                if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev').click();
+            }
+        });
     </script>
 </body>
 </html>
